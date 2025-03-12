@@ -3,7 +3,7 @@ import InputTheme from "./InputTheme";
 
 const ThemeDropdwon = () => {
 
-  const themes = ["default","light", "dark", "retro", "forest", "valentine","luxury", "caramellatte", "abyss", "winter", "nord", "dracula", "night"];
+  const themes = ["default","coffee","light", "dark", "retro", "forest", "valentine","luxury", "caramellatte", "abyss", "winter", "nord", "dracula", "night", "synthwave"];
 
   return (
     <div className="dropdown ">
