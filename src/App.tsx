@@ -6,7 +6,7 @@ function App() {
   return (
     <>
     <Navbar />
-    <p>App test <b>supabase</b></p>
+    <p className='text-center'>App test <b>supabase</b></p>
     </>
   )
 }

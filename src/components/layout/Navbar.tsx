@@ -1,19 +1,18 @@
+import ThemeDropdwon from "../theme/ThemeDropdwon";
+
 const Navbar = () => {
   return (
-    <div className="navbar bg-base-100 shadow-sm">
+    <div className="navbar bg-base-300 shadow-sm">
       <div className="flex-1">
         <a className="btn btn-ghost text-xl">Supabase</a>
       </div>
       {/* BUTTONS */}
-      <div className="flex-none">
-        <ul className="menu menu-horizontal px-1">
-          <li>
-            <a>Link</a>
-          </li>
-          <li>
-          <a>Link</a>
-          </li>
-        </ul>
+      <div className="flex items-center gap-3">
+
+      <ThemeDropdwon />
+        <button className="btn">Inscription</button>
+
+        <button className="btn btn-ghost">Connexion</button>
       </div>
     </div>
   );
