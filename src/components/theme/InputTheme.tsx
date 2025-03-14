@@ -1,6 +1,8 @@
+import { Dispatch, SetStateAction } from "react";
 
 type Props = {
     name: string,
+    setTheme: Dispatch<SetStateAction<string>>;
   }
 
 const InputTheme = ( props : Props) => {
@@ -15,7 +17,9 @@ const InputTheme = ( props : Props) => {
     name="theme-dropdown"
     className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
     aria-label={label}
-    value={props.name} />
+    value={props.name} 
+    onClick={() => props.setTheme(props.name)}/>
+    
   )
 }
 

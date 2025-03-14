@@ -1,9 +1,30 @@
+import { useEffect, useState } from "react";
+import { ThemeList } from "../../models/ThemeList";
 import InputTheme from "./InputTheme";
 
 
 const ThemeDropdwon = () => {
 
-  const themes = ["default","coffee","light", "dark", "retro", "forest", "valentine", "caramellatte", "abyss", "winter", "nord", "dracula", "night", "synthwave"];
+  const themes = ThemeList;
+
+  const [theme, setTheme] = useState("");
+
+  useEffect(() => {
+    // Récupération du thème au chargement
+    const savedTheme = localStorage.getItem('themeColor') || 'aqua';
+    setTheme(savedTheme);
+    
+  }, []);
+  
+  useEffect(() => {
+    if (theme) {
+      document.querySelector('html')?.setAttribute('data-theme', theme);
+      localStorage.setItem('themeColor', theme);
+    }
+  }, [theme]);
+
+  
+
 
   return (
     <div className="dropdown dropdown-top dropdown-end z-50">
@@ -19,9 +40,9 @@ const ThemeDropdwon = () => {
     </svg>
   </div>
   <ul tabIndex={0} className="dropdown-content bg-base-300 rounded-box w-52 p-2 shadow-2xl z-50">
-    {themes.map((name) => (
-      <li>
-        <InputTheme name={name} />
+    {themes.map((theme) => (
+      <li key={theme.id}>
+        <InputTheme name={theme.name} setTheme={setTheme} />
       </li>
     ))}
   </ul>
