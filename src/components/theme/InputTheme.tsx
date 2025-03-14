@@ -13,6 +13,7 @@ const InputTheme = ( props : Props) => {
     
   return (
     <input
+    data-set-theme={props.name}
     type="radio"
     name="theme-dropdown"
     className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
