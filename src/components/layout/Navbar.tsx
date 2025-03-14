@@ -1,4 +1,4 @@
-import ThemeDropdwon from "../theme/ThemeDropdwon";
+
 
 const Navbar = () => {
   return (
@@ -9,7 +9,6 @@ const Navbar = () => {
       {/* BUTTONS */}
       <div className="flex items-center gap-3">
 
-      <ThemeDropdwon />
         <button className="btn">Inscription</button>
 
         <button className="btn btn-ghost">Connexion</button>
