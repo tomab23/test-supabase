@@ -1,3 +1,4 @@
+import Navbar from "../components/layout/Navbar"
 
 type Props = {
     create : boolean
@@ -6,6 +7,7 @@ type Props = {
 const EmployeePage = (props : Props) => {
   return (
     <div>
+      <Navbar log={true} />
         {props.create ? (
             <p>Creation d'un employé</p>
         ) : (
