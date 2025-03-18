@@ -7,19 +7,12 @@ const ThemeDropdwon = () => {
 
   const themes = ThemeList;
 
-  const [theme, setTheme] = useState("");
+  const [theme, setTheme] = useState(localStorage.getItem("theme"));
 
-  useEffect(() => {
-    // Récupération du thème au chargement
-    const savedTheme = localStorage.getItem('themeColor') || 'aqua';
-    setTheme(savedTheme);
-    
-  }, []);
-  
   useEffect(() => {
     if (theme) {
       document.querySelector('html')?.setAttribute('data-theme', theme);
-      localStorage.setItem('themeColor', theme);
+      localStorage.setItem('theme', theme);
     }
   }, [theme]);
 

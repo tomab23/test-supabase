@@ -1,9 +1,13 @@
 import ThemeDropdwon from "../theme/ThemeDropdwon"
 
-const Footer = () => {
+type Props = {
+  fixed: boolean
+}
+const Footer = (props: Props) => {
+
   return (
-<footer className="footer sm:footer-horizontal bg-base-300 items-center p-2 px-5
-max-sm:text-sm max-sm:flex max-sm:justify-between">
+<footer className={`footer sm:footer-horizontal bg-base-300 items-center p-2 px-5
+max-sm:text-sm max-sm:flex justify-between ${props.fixed && "fixed bottom-0"}`}>
   <aside className="grid-flow-col items-center ">
     <p>Copyright © {new Date().getFullYear()} - All right reserved</p>
   </aside>
